@@ -24,10 +24,11 @@ const SignupForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log("Submitting ...")
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
+      console.log("Validation Errors ...")
       event.preventDefault();
       event.stopPropagation();
     }
